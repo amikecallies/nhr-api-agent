@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using nhr_api_agent.nhrappdata;
 
 namespace nhr_api_agent.Controllers
 {
@@ -24,16 +26,19 @@ namespace nhr_api_agent.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<Employees> Get()
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var dbcontext = new nhrappdataContext();
+
+            using (nhrappdataContext dbContext = new nhrappdataContext())
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                IQueryable<Employees> employees = from p in dbContext.Employees
+                                                  select p;
+                                                  //orderby p.ProductName descending
+
+                Employees[] employeesArray = employees.ToArray();
+                return employeesArray;
+            }
         }
     }
 }
