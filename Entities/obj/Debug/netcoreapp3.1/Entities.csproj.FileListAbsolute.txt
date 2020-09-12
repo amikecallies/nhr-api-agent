@@ -1,0 +1,12 @@
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\bin\Debug\netcoreapp3.1\Entities.runtimeconfig.json
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\bin\Debug\netcoreapp3.1\Entities.runtimeconfig.dev.json
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.genruntimeconfig.cache
+C:\Users\Michael\Documents\Development\nhr-api-agent\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache
