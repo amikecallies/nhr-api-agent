@@ -29,10 +29,18 @@ namespace nhr_api_agent.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Employee> Get()
+        public IEnumerable<WeatherForecast> Get()
         {
-            var employees = employeeRepository.FindAll();
-            return employees;
+            /*var employees = employeeRepository.FindAll();
+            return employees;*/
+            var rng = new Random();
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateTime.Now.AddDays(index),
+                TemperatureC = rng.Next(-20, 55),
+                Summary = Summaries[rng.Next(Summaries.Length)]
+            })
+            .ToArray();
         }
     }
 }

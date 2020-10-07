@@ -3,6 +3,10 @@
   <PropertyGroup>
     <NameOfLastUsedPublishProfile>nhr-api-agent - Web Deploy</NameOfLastUsedPublishProfile>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+    <GoogleCloudPublishChoice>Gae</GoogleCloudPublishChoice>
+    <GoogleCloudPublishConfiguration>Debug</GoogleCloudPublishConfiguration>
+    <GoogleAppEnginePublishPromote>True</GoogleAppEnginePublishPromote>
+    <GoogleAppEnginePublishOpenWebsite>True</GoogleAppEnginePublishOpenWebsite>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
