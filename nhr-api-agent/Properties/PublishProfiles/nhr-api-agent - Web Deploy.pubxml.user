@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAC/Kuu8eWxEiYVvcXkZITNwAAAAACAAAAAAAQZgAAAAEAACAAAADlb6OpbJBBQVHkI+qh/bhRpsEecT+v7W3mb9VGSRbdLQAAAAAOgAAAAAIAACAAAABh8v5Ms6drCGJh/SSAGbztlKJoR+m4N+GRWdmPOJNqKIAAAACMrj3XEXHOufxwZg7cx7RsJplfX1WcrE8kF/Eri8MXgXD8NaVoJ5dwwDWUJ5gwUxTk+xwdChL4navwgrDqkEOCAq8NLlJEwlT93VV9h1HWk95roJgAaSflOcXzhsYKEETe7iYgibuPhpzRarkQoXnjTEf17fqHYReXeORgZuO3WUAAAABJQRjhuzwvhEJ5tQC4Cahy376HqRa8bYugMH9ZepA1dWuSkS/QGZIRu1CyewmyyU7MZ2TZVUcYvQIf31Hs4Tsx</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=nhr-agent-api-server.mysql.database.azure.com%3b Port=3306%3b Database=nhrappdata%3b Uid=nhrserveradmin%40nhr-agent-api-server%3b Pwd=matthew6:33%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

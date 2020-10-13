@@ -1,18 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Entities.nhrappdata;
 using Entities.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Swashbuckle.AspNetCore.Swagger;
+using Pomelo.EntityFrameworkCore.MySql.Internal;
+using System;
+//using Swashbuckle.AspNetCore.Swagger;
 
 namespace nhr_api_agent
 {
@@ -30,7 +28,18 @@ namespace nhr_api_agent
         {
             services.AddControllers();
 
-            services.AddTransient<nhrappdataContext>();
+            services.AddDbContext<nhrappdataContext>(options =>
+            {
+                options.UseMySql(Configuration.GetConnectionString("DefaultConnection"),
+                    mySqlOptionsAction: MySqlOptions =>
+                    {
+                        MySqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 10,
+                        maxRetryDelay: TimeSpan.FromSeconds(30),
+                        errorNumbersToAdd: null);
+                    });
+            });
+
             services.AddTransient<IRepository<Employee>, EmployeeRepository>();
 
             // Register the Swagger generator

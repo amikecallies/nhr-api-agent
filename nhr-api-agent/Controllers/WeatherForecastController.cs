@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 namespace nhr_api_agent.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    /*[Route("[controller]")]*/
     public class WeatherForecastController : ControllerBase
     {
         private readonly IRepository<Employee> employeeRepository;
@@ -29,18 +29,20 @@ namespace nhr_api_agent.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [Route("/")]
+        public IEnumerable<Employee> Get()
         {
-            /*var employees = employeeRepository.FindAll();
-            return employees;*/
-            var rng = new Random();
+            // Error: HTTP ERROR 500 => Debugging for P163 Servant
+            var employees = employeeRepository.FindAll();
+            return employees;
+            /*var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
-            .ToArray();
+            .ToArray();*/
         }
     }
 }
