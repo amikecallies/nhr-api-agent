@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using MySql.Data.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Entities.nhrappdata
@@ -17,14 +18,14 @@ namespace Entities.nhrappdata
 
         public virtual DbSet<Employee> Employees { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
         // To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("server=127.0.0.1;port=3306;user=nhr-db-admin;password=matthew6:33;database=nhrappdata");
+                optionsBuilder.UseMySQL("Server=nhr-api-server.mysql.database.azure.com;Port=3306;Database=nhrappdata;Uid=nhrserveradmin@nhr-api-server;Pwd=matthew6:33;");
             }
-        }
+        }*/
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
